@@ -12,8 +12,7 @@ days_of_week = {
 }
 
 def get_birthdays_per_week(users, meantime=7):
-    actual_date = datetime.now()
-    actual_date = actual_date.date()
+    actual_date = datetime.now().date()
     end_date = actual_date + timedelta(days=meantime)
     dictionary = defaultdict(list)
     for person in users:
